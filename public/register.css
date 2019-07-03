@@ -1,0 +1,60 @@
+div.content {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: azure;
+    position: relative;
+    top: 30px;
+    border-radius: 40px;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+td {
+    padding: 7px;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(49, 49, 49);
+    background-color: azure;
+    width: 200px;
+    outline: none;
+    padding-bottom: 8px;
+    font-family: 'Playfair Display';
+    font-size: 15px;
+}
+
+button {
+    font-family: 'Oswald';
+    width: 230px;
+    border-radius: 20px;
+    border: 5px solid black;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(78, 32, 32);
+    padding: 10px;
+    margin: 20px 0;
+    position: relative;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+    transition: 0.1s;
+    outline: none;
+}
+
+button:hover {
+    width: 250px;
+}
+
+button:active {
+    width: 230px;
+}

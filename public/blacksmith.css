@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+
+div.content {
+    text-align: center;
+    margin: auto;
+    background-image: url('images/bs.jpg');
+    background-size: cover;
+    width: 80%;
+    position: relative;
+    top: 30px;
+    padding: 30px 0;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+div.table {
+    background-color: rgba(255, 255, 255, 0.287);
+    border-radius: 40px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+td,
+th {
+    padding: 5px 20px;
+    font-family: 'Cinzel';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.63);
+}
+
+th {
+    font-size: 20px;
+}
+
+h2.mymaterials {
+    font-family: 'Breath Fire';
+    letter-spacing: 3px;
+}
+
+tr.item {
+    background-color: transparent;
+    transition: 0.3s
+}
+
+tr.item:hover {
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+}
+
+a.craft {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(44, 10, 10);
+    border: 2px solid black;
+    color: azure;
+    padding: 3px 0;
+    width: 80px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+a.craft:hover {
+    width: 100px;
+}

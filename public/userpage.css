@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+
+nav {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.808);
+    z-index: 100;
+}
+
+li {
+    display: inline-block;
+    margin-top: 17px;
+}
+
+a.title {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    margin: 0 15px;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 0 0px white;
+    transition: 0.1s
+}
+
+a.navbar {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    margin: 0 15px;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 0 0px white;
+    position: relative;
+    transition: 0.5s
+}
+
+a.navbar:hover {
+    box-shadow: 0 0 20px rgb(82, 255, 232);
+}
+
+a.navbar:active {
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+img {
+    position: fixed;
+    width: 100%;
+    top: -250px;
+    background-size: cover;
+}
+
+div.judul {
+    position: relative;
+    top: 70px;
+    text-align: center;
+    color: azure;
+    text-shadow: 5px 5px 5px black
+}
+
+.judul h1 {
+    display: inline-block;
+    font-size: 90px;
+    border-bottom: 3px solid azure;
+    font-family: 'Oswald';
+}
+
+.judul h3 {
+    margin-top: 10px;
+}
+
+div.container {
+    background-color: rgb(32, 32, 32);
+    color: black;
+    padding-bottom: 100px;
+    position: relative;
+    top: 100px;
+    box-shadow: 0 -10px 15px black;
+}
+
+div.content {
+    padding: 20px 0;
+    margin: auto;
+    width: 60%;
+    /* background-color: azure; */
+    background-image: url('images/paper.jpg');
+    background-size: 100%;
+    border-radius: 50px;
+    border: 5px solid black;
+    position: relative;
+    top: 50px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.center {
+    text-align: center
+}
+
+.tablecenter td {
+    text-align: center;
+}
+
+.item a {
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    width: 60px;
+    color: azure;
+    background-color: rgb(100, 42, 42);
+    padding: 3px;
+    border-radius: 8px;
+    border: 3px solid black;
+    transition: 0.1s
+}
+
+.item a:hover {
+    width: 70px;
+}
+
+div.scrollbox {
+    height: 250px;
+    overflow: auto;
+}
+
+th {
+    font-size: 20px;
+    padding: 5px 20px;
+    color: azure;
+    font-family: 'Cinzel';
+    background-color: rgb(44, 15, 5);
+}
+
+td {
+    padding: 5px;
+    font-family: 'Cinzel';
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+table.table-profile {
+    margin-top: 20px;
+    font-family: 'Playfair Display';
+}
+
+h1.welcome {
+    font-family: 'Breath Fire';
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: rgb(44, 15, 5);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.404)
+}
+
+h3.center {
+    font-size: 25px;
+    font-family: 'Cinzel';
+    color: rgb(44, 15, 5);
+}
+
+tr {
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+tr:hover {
+    background-color: rgba(114, 67, 28, 0.397)
+}

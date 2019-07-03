@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNTOLD | Users</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.808);
+            z-index: 100;
+        }
+
+        li {
+            display: inline-block;
+            margin-top: 17px;
+        }
+
+        a.title {
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: white;
+            margin: 0 15px;
+            padding: 8px;
+            border-radius: 15px;
+            box-shadow: 0 0 0px white;
+            transition: 0.1s
+        }
+
+        a.navbar {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: white;
+            margin: 0 15px;
+            padding: 8px;
+            border-radius: 15px;
+            box-shadow: 0 0 0px white;
+            position: relative;
+            transition: 0.5s
+        }
+
+        a.navbar:hover {
+            box-shadow: 0 0 20px rgb(82, 255, 232);
+        }
+
+        a.navbar:active {
+            box-shadow: 0 0 20px rgb(255, 255, 255);
+        }
+
+        img {
+            position: fixed;
+            width: 100%;
+            top: -250px;
+            background-size: cover;
+        }
+
+        div.judul {
+            position: relative;
+            top: 110px;
+            text-align: center;
+            color: azure;
+            text-shadow: 5px 5px 5px black
+        }
+
+        .judul h1 {
+            display: inline-block;
+            font-size: 90px;
+            border-bottom: 3px solid azure;
+        }
+
+        .judul h3 {
+            margin-top: 10px;
+        }
+
+        div.container {
+            background-color: rgb(32, 32, 32);
+            height: 1000px;
+            position: relative;
+            top: 160px;
+            box-shadow: 0 -10px 15px black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="judul">
+        <h1>Add Item</h1>
+        <h3>Item of UNTOLD World</h3>
+    </div>
+    <div class="container">
+
+        <br><br>
+        <h1>Add Item</h1>
+        <br>
+
+        <form action="/admin/items/add" method="POST">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>: <input type="text" name="name" id="name" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price</label></td>
+                    <td>: <input type="text" name="price" id="price" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="type">Type</label></td>
+                    <td>: <select name="type" id="type" required>
+                            <option value="sellable">sellable</option>
+                            <option value="crafting">crafting</option>
+                            <option value="attack">attack</option>
+                            <option value="defense">defense</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="effect">Effect</label></td>
+                    <td>: <input type="text" name="effect" id="effect" value="" required></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit" onclick="return confirm('Are you sure to create?')">CREATE ITEM</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

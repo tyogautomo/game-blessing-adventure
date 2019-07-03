@@ -7,9 +7,9 @@ const ControllerUserMonster = require('../controllers/controller-usermonster')
 const ControllerUserItem = require('../controllers/controller-useritem')
 const ControllerItem = require('../controllers/controller-item')
 
-router.get('/:username', ControllerItem.blacksmith)
+// router.get('/:username', ControllerItem.blacksmith)
 
-router.get('/:username/craft/:item', ControllerUserItem.forge)
-router.post('/:username/craft/:item', ControllerUserItem.craft)
+// router.get('/:username/craft/:item', ControllerUserItem.forge)
+// router.post('/:username/craft/:item', ControllerUserItem.craft)
 
 module.exports = router;

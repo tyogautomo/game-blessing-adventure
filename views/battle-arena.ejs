@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Oswald|Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/nav-style.css">
+    <link rel="stylesheet" href="/body-general.css">
+    <link rel="stylesheet" href="/battle.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNTOLD | Battle Arena</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="judul">
+        <h1>Battle Arena</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <form action="/dungeon/<%= currentUser.username %>/<%= monster.id %>/<%= battle.id %>" method="POST">
+
+                <div class="tableMonster">
+                    <h2 class="status"><%= monster.name %>'s status :</h2>
+                    <table>
+                        <tr>
+                            <td><label for="name">Monster Name</label></td>
+                            <td>: <input type="text" name="name" id="name" value="<%= monster.name %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="monsterHP">HP</label></td>
+                            <td>: <input class="hp" type="text" name="monsterHP" id="monsterHP"
+                                    value="<%= battle.monsterHP %>" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="monsterAP">AP</label></td>
+                            <td>: <input class="ap" type="text" name="monsterAP" id="monsterAP"
+                                    value="<%= monster.ap %>" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="monsterLv">Level</label></td>
+                            <td>: <input type="text" name="monsterLv" id="monsterLv" value="<%= monster.level %>"
+                                    readonly>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tableMonster">
+                    <h2 class="status"><%= currentUser.username %>'s status :</h2>
+                    <table>
+                        <tr>
+                            <td><label for="username">User Name</label></td>
+                            <td>: <input type="text" name="username" id="username" value="<%= currentUser.username %>"
+                                    readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userHP">HP</label></td>
+                            <td>: <input class="hp" type="text" name="userHP" id="userHP" value="<%= battle.userHP %>"
+                                    readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userAP">AP</label></td>
+                            <td>: <input class="ap" type="text" name="userAP" id="userAP" value="<%= currentUser.ap %>"
+                                    readonly></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <button type="submit">ATTACK!</button>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

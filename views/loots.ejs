@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Oswald|Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/nav-style.css">
+    <link rel="stylesheet" href="/body-general.css">
+    <link rel="stylesheet" href="/loot.css">
+    <title>UNTOLD | Dungeon</title>
+
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="judul">
+        <h1>Loots</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <form action="" method="POST">
+                <h2 class="result">You've got <input class="count" type="text" name="count" value="<%= items.length %>" readonly> item(s)!</h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>Item's Name</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                        <th class="itemId">Item's Id</th>
+                    </tr>
+
+                    <% for (let i = 0; i < items.length; i++) { %>
+                    <tr>
+                        <td><%= items[i].dataValues.name %></td>
+                        <td><%= items[i].dataValues.price %></td>
+                        <td><%= items[i].dataValues.type %></td>
+                        <td><%= items[i].dataValues.effect %></td>
+                        <td class="itemId"><input type="text" name="id" value="<%= items[i].dataValues.id %>" readonly></td>
+                    </tr>
+                    <%}%>
+                </table>
+                <br>
+                <button type="submit">Gather All!</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

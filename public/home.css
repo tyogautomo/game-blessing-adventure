@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+
+div.judul {
+    font-family: 'Oswald'
+}
+
+div.content {
+    padding-top: 40px;
+    text-align: center;
+}
+
+a.home {
+    font-family: 'Oswald';
+    width: 300px;
+    border-radius: 20px;
+    border: 5px solid black;
+    font-size: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(78, 32, 32);
+    padding: 10px;
+    margin: 20px 0;
+    font-family: 'Breath Fire';
+    letter-spacing: 3px;
+    position: relative;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+    transition: 0.1s;
+}
+
+a.home:hover {
+    top: -10px;
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.363);
+}
+
+a.home:active {
+    top: 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}

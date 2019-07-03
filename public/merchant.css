@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+
+div.content {
+    text-align: center;
+    background-image: url('images/merchant.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    position: relative;
+    top: 30px;
+    padding: 70px 20px;
+    width: 70%;
+    margin: auto;
+    color: azure;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 8px 20px;
+    border-bottom: 1px solid black;
+    font-family: 'Cinzel';
+    font-size: 17px;
+}
+
+th.options,
+td.options {
+    padding: 8px 50px;
+}
+
+tr.head {
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+tr.item {
+    background-color: transparent;
+    transition: 0.3s
+}
+
+tr.item:hover {
+    background-color: rgba(255, 255, 255, 0.253);
+    color: black;
+}
+
+a.buy {
+    box-sizing: border-box;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(46, 12, 12);
+    padding: 5px 0;
+    width: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.486);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+a.buy:hover {
+    width: 100px;
+}

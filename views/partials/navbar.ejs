@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+        <li><a class="title" class="navbar" href="/">UNTOLD</a></li>
+        <%if(user.id != undefined && user.username != 'admin') {%>
+        <li><a class="navbar" href="/dungeon/<%= user.username %>">Dungeon</a></li>
+        <li><a class="navbar" href="/marketplace/<%= user.username %>">Merchant</a></li>
+        <li><a class="navbar" href="/blacksmith/<%= user.username %>">Blacksmith</a></li>
+        <li><a class="navbar" href="/userpage/<%= user.username %>">My Character</a></li>
+        <li><a class="navbar" href="/logout">Logout</a></li>
+        <%} else if (user.username == 'admin') {%>
+        <li><a class="navbar" href="/admin/users">Users</a></li>
+        <li><a class="navbar" href="/admin/monsters">Monsters</a></li>
+        <li><a class="navbar" href="/admin/items">Items</a></li>
+        <li><a class="navbar" href="/userpage/<%= user.username %>">My Character</a></li>
+        <li><a class="navbar" href="/logout">Logout</a></li>
+        <%} else {%>
+        <li><a class="navbar" href="/register">Register</a></li>
+        <li><a class="navbar" href="/login">Log in</a></li>
+        <%}%>
+    </ul>
+</nav>
+<img src="/images/banner.jpg" alt="">

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="body-general.css">
+    <title>UNTOLD</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="judul">
+        <h1>UNTOLD</h1>
+        <h3>The Adventure of the Unknown User</h3>
+    </div>
+    <div class="container">
+
+        <h1><%= message %></h1>
+        <h2><a href="/login">Click here to Log in</a></h2>
+
+    </div>
+
+</body>
+
+</html>

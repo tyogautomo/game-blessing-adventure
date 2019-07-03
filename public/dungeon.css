@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+
+div.content {
+    text-align: center;
+    background-image: url('images/dungeon.png');
+    margin: auto;
+    width: 60%;
+    position: relative;
+    top: 20px;
+    padding: 30px 0;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+table {
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-family: 'Cinzel'
+}
+
+div.table {
+    background-color: rgba(255, 255, 255, 0.39);
+    width: 40%;
+    margin: 20px auto;
+    border-radius: 20px;
+
+}
+
+tr {
+    text-align: left;
+}
+
+img.monster {
+    width: 100px;
+    position: static;
+}
+
+h1 {
+    color: azure;
+    font-family: 'Breath Fire';
+    letter-spacing: 3px;
+}
+
+h3.warning {
+    color: azure;
+    font-family: 'Cinzel';
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid azure;
+}
+
+a.battle {
+    display: inline-block;
+    background-color: rgb(80, 23, 23);
+    border: 3px solid black;
+    border-radius: 10px;
+    color: azure;
+    text-decoration: none;
+    padding: 8px;
+    font-family: 'Breath Fire';
+    font-size: 20px;
+    width: 130px;
+    transition: 0.1s
+}
+
+a.battle:hover {
+    width: 150px;
+}
