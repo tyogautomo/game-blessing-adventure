@@ -1,0 +1,28 @@
+{
+  "name": "the-blessing-adventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyogautomo/the-blessing-adventure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyogautomo/the-blessing-adventure/issues"
+  },
+  "homepage": "https://github.com/tyogautomo/the-blessing-adventure#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.2",
+    "pg": "^7.11.0",
+    "sequelize": "^5.9.0"
+  }
+}
