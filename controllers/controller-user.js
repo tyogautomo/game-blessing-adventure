@@ -5,12 +5,13 @@ const {
     UserMonster,
     UserItem
 } = require('../models/index')
+
 const Op = require('sequelize').Op
 const bcrypt = require('bcryptjs')
 
 class ControllerUser {
 
-    // ===================================== BASIC CRUD
+    // ---------------------------- BASIC CRUD
     static getAll(req, res) {
         User.findAll({
                 where: {
@@ -30,31 +31,15 @@ class ControllerUser {
     }
 
     static getOne(req, res) {
-        User.findByPk(req.params.username)
+        User.findOne({
+                where: {
+                    username: req.params.username
+                }
+            })
             .then(user => {
                 res.render('user-edit.ejs', {
-                    user
+                    currentUser: user.dataValues
                 })
-            })
-            .catch(err => {
-                res.send(err)
-            })
-    }
-
-    static register(req, res) {
-        let data = {
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-            balance: 1000,
-            hp: 100,
-            ap: 5,
-            exp: 0
-        }
-
-        User.create(data)
-            .then(() => {
-                res.redirect('/')
             })
             .catch(err => {
                 res.send(err)
@@ -68,7 +53,8 @@ class ControllerUser {
             balance: req.body.balance,
             hp: req.body.hp,
             ap: req.body.ap,
-            exp: req.body.exp
+            exp: req.body.exp,
+            updatedAt: new Date()
         }
 
         User.update(data, {
@@ -95,7 +81,8 @@ class ControllerUser {
             })
     }
 
-    // ===================================== ADVANCED
+    // ----------------------------- ADVANCED
+
     static search(req, res) {
         let searchBy = req.body.by
         let search = req.body.search
@@ -182,12 +169,10 @@ class ControllerUser {
                     res.send('Wrong username')
                 }
             })
-            .catch(err => {
-                res.send(err)
-            })
     }
 
     static userPage(req, res) {
+
         if (req.params.username != req.session.currentUser.username) {
             res.send(`You're not logged in as ${req.params.username}`)
         } else {
