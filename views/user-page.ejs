@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Oswald|Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="userpage.css">
+    <title>UNTOLD | <%= user.username %>'s room</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="judul">
+        <h1><%= userExist.username %>'s Room</h1>
+        <h3>The Adventure of the Unknown User</h3>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1 class="center welcome">Welcome to the Untold Land</h1>
+            <h1 class="center welcome"><%= userExist.username %> !</h1>
+            <br><br>
+
+            <h3 class="center">You come to this world with:</h3>
+            <table class="table-profile">
+                <tr>
+                    <td>HP</td>
+                    <td>: <%= userExist.hp %> point(s)</td>
+                </tr>
+                <tr>
+                    <td>AP</td>
+                    <td>: <%= userExist.ap %> point(s)</td>
+                </tr>
+                <tr>
+                    <td>Balance</td>
+                    <td>: <%= userExist.balance %> dalant</td>
+                </tr>
+                <tr>
+                    <td>Experience</td>
+                    <td>: <%= userExist.exp %> soul(s)</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+
+            <h3 class="center">Inventory:</h3>
+            <br>
+            <% if (userItems.length == 0) { %>
+            <h2 class="center">You have no item(s) to display now.</h2>
+            <% } else { %>
+            <div class="scrollbox">
+                <table class="tablecenter item">
+                    <tr>
+                        <th>No.</th>
+                        <th>Item name</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                        <th>Option</th>
+                    </tr>
+
+                    <%for (let i = 0; i < userItems.length; i++) {%>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= userItems[i].Item.name %></td>
+                        <td><%= userItems[i].Item.price %></td>
+                        <td><%= userItems[i].Item.type %></td>
+                        <td><%= userItems[i].Item.effect %></td>
+                        <% if (userItems[i].Item.type == 'sellable'|| userItems[i].Item.type == 'crafting') { %>
+                        <td><a href="/item/sell/<%= user.username %>/<%= userItems[i].id %>">sell</a></td>
+                        <%} else {%>
+                        <td><a href="/item/sell/<%= user.username %>/<%= userItems[i].id %>">sell</a> | <a
+                                href="/item/use/<%= user.username %>/<%= userItems[i].id %>">use</a></td>
+                        <%}%>
+                        </tr>
+                        <%}%>
+
+                </table>
+            </div>
+            <%}%>
+            <br>
+            <h3 class="center">Last 10 battles of <%= userMonsters.length %> battle(s) histories:</h3>
+            <br>
+            <% if (userMonsters.length == 0) { %>
+            <h2 class="center">You have no battle(s) to display now.</h2>
+            <% } else { %>
+            <table class="tablecenter monster">
+                <tr>
+                    <th>No.</th>
+                    <th>Monster name</th>
+                    <th>Battle Status</th>
+                    <th>Battle Start</th>
+                </tr>
+
+                <% if (userMonsters.length < 10) { %>
+                <%for (let i = 0; i < userMonsters.length; i++) {%>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= userMonsters[i].Monster.name %></td>
+                    <td><%= userMonsters[i].status %></td>
+                    <td><%= userMonsters[i].createdAt.toString().substr(0,24) %></td>
+                </tr>
+                <%}%>
+                    <% } else { %>
+                <%for (let i = 0; i < 10; i++) {%>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= userMonsters[i].Monster.name %></td>
+                    <td><%= userMonsters[i].status %></td>
+                    <td><%= userMonsters[i].createdAt.toString().substr(0,24) %></td>
+                </tr>
+                <%}%>
+                    <%}%>
+
+            </table>
+            <%}%>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
