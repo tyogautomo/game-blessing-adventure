@@ -22,7 +22,6 @@
     <div class="container">
             <h1>Leaderboard</h1>
             <br>
-            <div class="color-container"></div>
             <form action="/leaderboard" method="POST">
                 <table>
                     <tr>
@@ -44,7 +43,7 @@
                     </tr>
                 </table>
             </form>
-    
+            
             <br>
             <h2>Sorted by <%= sort %>, <%= direction %></h2>
             <br>
@@ -72,6 +71,7 @@
                 <% counter++ %>
                 <%}%>
             </table>
+            <div class="color-container"></div>
     </div>
 
 </body>
