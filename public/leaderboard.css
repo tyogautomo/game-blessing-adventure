@@ -26,11 +26,11 @@ div.container {
 #sort, #direction, #button-sort {
     height: 35px;
     width: 120px;
-    font-size: 25px; 
+    font-size: 18px; 
 }
 
 .sortby {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 div.table-container {
