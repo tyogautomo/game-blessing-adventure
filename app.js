@@ -1,7 +1,7 @@
 const session = require('express-session')
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 4000
 const flash = require('express-flash')
 
 app.use(express.json())
@@ -44,12 +44,8 @@ app.use((req, res, next) => {
     if (req.session.currentUser) {
         next()
     } else {
-<<<<<<< HEAD
-        res.send(`Please Log in First`)
-=======
         req.flash('error', 'Please Login to access the game')
         res.redirect('/')
->>>>>>> 695a370203b58bdc910762da42b9d19477fd8e6c
     }
 })
 

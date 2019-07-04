@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
 
     generateExp() {
       let random = 0;
-      console.log(this.level, '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
       if (this.level >= 15) {
         random = Math.floor(Math.random() * 16) + 50;
       } else if (this.level >= 10) {
@@ -19,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       } else if (this.level >= 1) {
         random = Math.floor(Math.random() * 6) + 15;
       }
-
       return random
     }
   }
