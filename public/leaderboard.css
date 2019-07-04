@@ -20,7 +20,12 @@ div.container {
     z-index: 1
 }
 h2.sortBy2 {
-    padding-left: 150px;
+    padding-left: 300px;
+}
+
+select.sort {
+    height: 50px;
+    width: 150px;
 }
 
 td.sortby {
