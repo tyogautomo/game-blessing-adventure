@@ -22,80 +22,83 @@
     </div>
     <div class="container">
         <div class="content">
+            <% if (flash.error) { %>
+            <h4 class="error"><%= flash.error %></h4>
+            <%}%>
             <form action="/blacksmith/<%= user.username %>/craft/<%= item.name %>" method="POST">
-                <div class="table">
-                    <table>
-                        <h2><%= user.username %>'s crafting Items: </h2>
-                        <br>
-                        <tr>
-                            <th>Illustration</th>
-                            <th>Item's name</th>
-                            <th>Count</th>
-                            <th class="input">input</th>
-                        </tr>
+            <div class="table">
+                <table>
+                    <h2><%= user.username %>'s crafting Items: </h2>
+                    <br>
+                    <tr>
+                        <th>Illustration</th>
+                        <th>Item's name</th>
+                        <th>Count</th>
+                        <th class="input">input</th>
+                    </tr>
 
-                        <% for (let item in relatedItems) { %>
+                    <% for (let item in relatedItems) { %>
 
-                        <tr>
-                            <td><img src="" alt=""></td>
-                            <td><%= item %></td>
-                            <td><%= relatedItems[item].count %></td>
-                            <td class="input"><input class="count" type="text" name="<%= item %>"
-                                    value="<%= relatedItems[item].count %>" readonly></td>
-                        </tr>
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td><%= item %></td>
+                        <td><%= relatedItems[item].count %></td>
+                        <td class="input"><input class="count" type="text" name="<%= item %>"
+                                value="<%= relatedItems[item].count %>" readonly></td>
+                    </tr>
 
-                        <%}%>
+                    <%}%>
                     </table>
                 </div>
         
                 <div class="table">
                     <table>
                         <h2>Item to build: <%= item.name %></h2>
-                        <tr>
-                            <th>Material</th>
-                            <th>Needs</th>
-                        </tr>
+                    <tr>
+                        <th>Material</th>
+                        <th>Needs</th>
+                    </tr>
 
-                        <% if (item.name == 'Dagon') { %>
-                        <tr>
-                            <td><input type="text" name="name1" value="dragon_scale" readonly></td>
-                            <td><input class="count" type="text" name="count1" value="3" readonly></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="name2" value="dragon_arms" readonly></td>
-                            <td><input class="count" type="text" name="count2" value="2" readonly></td>
-                        </tr>
-                        <% } else if (item.name == 'Chrono') { %>
-                        <tr>
-                            <td><input type="text" name="name1" value="dragon_scale" readonly></td>
-                            <td><input class="count" type="text" name="count1" value="6" readonly></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="name2" value="dragon_arms" readonly></td>
-                            <td><input class="count" type="text" name="count2" value="4" readonly></td>
-                        </tr>
-                        <% } else if (item.name == 'Elixir') { %>
-                        <tr>
-                            <td><input type="text" name="name1" value="dragon_eyes" readonly></td>
-                            <td><input class="count" type="text" name="count1" value="3" readonly></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="name2" value="dragon_legs" readonly></td>
-                            <td><input class="count" type="text" name="count2" value="2" readonly></td>
-                        </tr>
-                        <% } else if (item.name == 'Cryo') { %>
-                        <tr>
-                            <td><input type="text" name="name1" value="dragon_eyes" readonly></td>
-                            <td><input class="count" type="text" name="count1" value="6" readonly></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="name2" value="dragon_legs" readonly></td>
-                            <td><input class="count" type="text" name="count2" value="4" readonly></td>
-                        </tr>
-                        <% } %>
-                    </table>
-                    <button type="submit">CRAFT!</button>
-                </div>
+                    <% if (item.name == 'Dagon') { %>
+                    <tr>
+                        <td><input type="text" name="name1" value="dragon_scale" readonly></td>
+                        <td><input class="count" type="text" name="count1" value="3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name2" value="dragon_arms" readonly></td>
+                        <td><input class="count" type="text" name="count2" value="2" readonly></td>
+                    </tr>
+                    <% } else if (item.name == 'Chrono') { %>
+                    <tr>
+                        <td><input type="text" name="name1" value="dragon_scale" readonly></td>
+                        <td><input class="count" type="text" name="count1" value="6" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name2" value="dragon_arms" readonly></td>
+                        <td><input class="count" type="text" name="count2" value="4" readonly></td>
+                    </tr>
+                    <% } else if (item.name == 'Elixir') { %>
+                    <tr>
+                        <td><input type="text" name="name1" value="dragon_eyes" readonly></td>
+                        <td><input class="count" type="text" name="count1" value="3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name2" value="dragon_legs" readonly></td>
+                        <td><input class="count" type="text" name="count2" value="2" readonly></td>
+                    </tr>
+                    <% } else if (item.name == 'Cryo') { %>
+                    <tr>
+                        <td><input type="text" name="name1" value="dragon_eyes" readonly></td>
+                        <td><input class="count" type="text" name="count1" value="6" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name2" value="dragon_legs" readonly></td>
+                        <td><input class="count" type="text" name="count2" value="4" readonly></td>
+                    </tr>
+                    <% } %>
+                </table>
+                <button type="submit">CRAFT!</button>
+            </div>
             </form>
         </div>
 

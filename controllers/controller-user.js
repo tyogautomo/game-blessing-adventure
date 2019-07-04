@@ -132,12 +132,14 @@ class ControllerUser {
             ap: 5,
             exp: 0
         }
+        // console.log(data)
 
         User.create(data)
             .then(() => {
                 res.redirect('/')
             })
             .catch(err => {
+                console.log(err)
                 res.send(err)
             })
     }
@@ -163,11 +165,20 @@ class ControllerUser {
                         }
                         res.redirect(`/userpage/${req.session.currentUser.username}`)
                     } else {
-                        res.send('Wrong password')
+                        throw new Error(`password`)
                     }
                 } else {
-                    res.send('Wrong username')
+                    throw new Error('username')
                 }
+            })
+            .catch(err => {
+                if (err.message == 'password') {
+                    req.flash('error', 'Sorry, wrong password.')
+                } else if (err.message == 'username') {
+                    req.flash('error', 'Sorry, username didnt exist')
+                }
+                // console.log(err.message)
+                res.redirect('/login')
             })
     }
 

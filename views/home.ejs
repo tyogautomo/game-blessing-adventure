@@ -22,6 +22,10 @@
 
     <div class="home-container">
         <div class="content">
+            <% if (flash.error) { %>
+            <h4 class="error"><%= flash.error %></h4>
+            <%}%>
+
             <% if (user.id == undefined) { %>
             <a class="home" href="/login">PLAY!</a>
             <%}%>

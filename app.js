@@ -2,6 +2,7 @@ const session = require('express-session')
 const express = require('express')
 const app = express()
 const port = 3000
+const flash = require('express-flash')
 
 app.use(express.json())
 app.use(express.urlencoded({
@@ -13,6 +14,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+app.use(flash());
 
 const homeRouter = require('./routes/home-route')
 const registerRouter = require('./routes/register-route')
@@ -38,13 +40,14 @@ app.use('/login', loginRouter)
 app.use('/leaderboard', userRouter)
 
 // LOGIN PRIVILEGE
-// app.use((req, res, next) => {
-//     if (req.session.currentUser) {
-//         next()
-//     } else {
-//         res.send(`Please Log in First`)
-//     }
-// })
+app.use((req, res, next) => {
+    if (req.session.currentUser) {
+        next()
+    } else {
+        req.flash('error', 'Please Login to access the game')
+        res.redirect('/')
+    }
+})
 
 app.use('/userpage', express.static('public'), userRouter)
 app.use('/logout', logoutRouter)
@@ -55,13 +58,13 @@ app.use('/marketplace', express.static('public'), marketRouter)
 app.use('/blacksmith', express.static('public'), smithRouter)
 
 // GM PRIVILEGE
-// app.use((req, res, next) => {
-//     if (req.session.currentUser.username == 'admin') {
-//         next()
-//     } else {
-//         res.send(`You're not an admin`)
-//     }
-// })
+app.use((req, res, next) => {
+    if (req.session.currentUser.username == 'admin') {
+        next()
+    } else {
+        res.send(`You're not an admin`)
+    }
+})
 
 app.use('/admin', express.static('public'), adminRouter)
 

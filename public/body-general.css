@@ -24,3 +24,7 @@ div.container {
     top: 100px;
     box-shadow: 0 -10px 15px black;
 }
+
+h4.error {
+    color: red;
+}
