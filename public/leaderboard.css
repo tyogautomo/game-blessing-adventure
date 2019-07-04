@@ -28,6 +28,7 @@ div.leader-board-color {
 }
 
 div.table-container {
+    padding-left: 150px;
     z-index: 555555;
 }
 
