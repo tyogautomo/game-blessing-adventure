@@ -150,7 +150,6 @@ class ControllerUser {
             })
             .then(userExist => {
                 if (userExist) {
-                    // let check = bcrypt.compareSync(req.body.password, userExist.password)
                     let check = true
                     if (check) {
                         req.session.currentUser = {
@@ -176,7 +175,6 @@ class ControllerUser {
                 } else if (err.message == 'username') {
                     req.flash('error', 'Sorry, username didnt exist')
                 }
-                // console.log(err.message)
                 res.redirect('/login')
             })
     }
