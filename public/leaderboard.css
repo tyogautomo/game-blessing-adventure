@@ -19,11 +19,11 @@ div.container {
     background-size: cover;
     z-index: 1
 }
-h2.sortBy2 {
+.sortBy2 {
     padding-left: 300px;
 }
 
-.sort {
+#sort {
     height: 200px;
     width: 250px;
 }
@@ -33,7 +33,7 @@ h2.sortBy2 {
 }
 
 div.table-container {
-    padding-left: 250px;
+    padding-left: 240px;
 }
 
 div.monster-table {
