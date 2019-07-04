@@ -23,9 +23,10 @@ div.container {
     padding-left: 300px;
 }
 
-#sort, #direction {
-    height: 50px;
-    width: 150px;
+#sort, #direction, #button-sort {
+    height: 35px;
+    width: 120px;
+    font-size: 25px; 
 }
 
 .sortby {
