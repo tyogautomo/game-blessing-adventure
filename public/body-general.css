@@ -19,6 +19,10 @@ div.judul {
     margin-top: 10px;
 }
 
+.navbar {
+    font-family: 'Breath Fire';
+}
+
 div.container {
     background-color: rgb(32, 32, 32);
     padding-bottom: 300px;
