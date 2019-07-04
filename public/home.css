@@ -11,6 +11,10 @@ h1 {
     font-family: 'Breath Fire';
 }
 
+h3 {
+    font-size: 60px;
+}
+
 div.content {
     padding-top: 40px;
     text-align: center;
