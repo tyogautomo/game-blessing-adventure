@@ -9,7 +9,7 @@ function sendEmail(userEmail) {
         port: 25,
         auth: {
             user: 'gamergarage2020@gmail.com',
-            pass: 'thegamer2020*'
+            pass: process.env.PASSWORD
         },
         tls: {
             rejectUnauthorized: false
