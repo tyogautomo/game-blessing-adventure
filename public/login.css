@@ -2,10 +2,6 @@ div.content {
     background-image: url('./images/paper.jpg');
 }
 
-div.container {
-    background-image: url('./images/prime-world-1366x768.jpg')
-}
-
 #username, #password {
     background-color: transparent;
 }
