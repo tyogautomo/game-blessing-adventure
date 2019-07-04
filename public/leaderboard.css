@@ -19,12 +19,12 @@ div.container {
     background-size: cover;
     z-index: 1
 }
-h1,h2 {
+h2.sortBy2 {
     padding-left: 150px;
 }
 
 td.sortby {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 div.table-container {
