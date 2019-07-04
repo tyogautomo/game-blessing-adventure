@@ -1,6 +1,5 @@
 let fs = require('fs')
 let password = fs.readFileSync('./config/password.csv', 'utf8')
-// console.log(password)
 
 function sendEmail(userEmail) {
 
@@ -11,7 +10,7 @@ function sendEmail(userEmail) {
         secure: false,
         port: 25,
         auth: {
-            user: 'gamergarage2020@gmail.com',
+            user: 'theblessedadventure123@gmail.com',
             pass: password
         },
         tls: {

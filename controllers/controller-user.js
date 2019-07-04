@@ -99,7 +99,6 @@ class ControllerUser {
                     })
                 })
                 .catch(err => {
-                    console.log(err)
                     res.send('Wrong input')
                 })
 
@@ -123,6 +122,7 @@ class ControllerUser {
     }
 
     static register(req, res) {
+        console.log(process.env.PASSWORD)
         let data = {
             username: req.body.username,
             email: req.body.email,
