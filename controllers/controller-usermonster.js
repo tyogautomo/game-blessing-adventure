@@ -109,13 +109,13 @@ class ControllerUserMonster {
                     return Promise.all([battleExist, userExist, Monster.findByPk(req.params.monsterId)])
                 })
                 .then(([battleExist, userExist, monster]) => {
-                    // console.log(monster, '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
                     let currentExp = userExist.dataValues.exp
-                    let earnedExp = Math.floor((Math.random() * 16) + 10)
+                    let earnedExp = monster.generateExp()
                     let updateExp = currentExp + earnedExp
                     let updateData = {
                         exp: updateExp
                     }
+                    console.log(earnedExp, '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
                     return Promise.all([battleExist, earnedExp, User.update(updateData, {
                         where: {
                             id: req.session.currentUser.id
