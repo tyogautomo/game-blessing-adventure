@@ -12,6 +12,15 @@ div.content {
     text-align: center;
 }
 
+div.home-container {
+    background-image: url('./images/home-background.jpg'); 
+    background-color: rgb(32, 32, 32);
+    padding-bottom: 300px;
+    position: relative;
+    top: 100px;
+    box-shadow: 0 -10px 15px black;
+}
+
 a.home {
     font-family: 'Oswald';
     width: 300px;

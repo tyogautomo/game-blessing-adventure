@@ -1,7 +1,4 @@
 'use strict';
-
-let bcrypt = require('bcryptjs')
-
 module.exports = (sequelize, DataTypes) => {
   class User extends sequelize.Sequelize.Model {
     static associate(models) {
@@ -20,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     hp: DataTypes.INTEGER,
     ap: DataTypes.INTEGER,
     balance: DataTypes.INTEGER,
-    experience: DataTypes.INTEGER
+    exp: DataTypes.INTEGER
   }, {
     sequelize
   })

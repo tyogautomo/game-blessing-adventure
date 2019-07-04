@@ -38,13 +38,13 @@ app.use('/login', loginRouter)
 app.use('/leaderboard', userRouter)
 
 // LOGIN PRIVILEGE
-app.use((req, res, next) => {
-    if (req.session.currentUser) {
-        next()
-    } else {
-        res.send(`Please Log in First`)
-    }
-})
+// app.use((req, res, next) => {
+//     if (req.session.currentUser) {
+//         next()
+//     } else {
+//         res.send(`Please Log in First`)
+//     }
+// })
 
 app.use('/userpage', express.static('public'), userRouter)
 app.use('/logout', logoutRouter)
@@ -55,13 +55,13 @@ app.use('/marketplace', express.static('public'), marketRouter)
 app.use('/blacksmith', express.static('public'), smithRouter)
 
 // GM PRIVILEGE
-app.use((req, res, next) => {
-    if (req.session.currentUser.username == 'admin') {
-        next()
-    } else {
-        res.send(`You're not an admin`)
-    }
-})
+// app.use((req, res, next) => {
+//     if (req.session.currentUser.username == 'admin') {
+//         next()
+//     } else {
+//         res.send(`You're not an admin`)
+//     }
+// })
 
 app.use('/admin', express.static('public'), adminRouter)
 

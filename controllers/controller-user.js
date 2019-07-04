@@ -193,7 +193,6 @@ class ControllerUser {
                     }]
                 })
                 .then(userExist => {
-                    // console.log(JSON.stringify(userExist.dataValues.UserMonsters, null, 2))
                     let userMonsters = userExist.dataValues.UserMonsters
                     let userItems = userExist.dataValues.UserItems
                     userMonsters.sort((a, b) => b.dataValues.createdAt - a.dataValues.createdAt)
