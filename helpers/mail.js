@@ -1,3 +1,4 @@
+
 function sendEmail(userEmail) {
 
     var nodemailer = require('nodemailer');
@@ -8,7 +9,7 @@ function sendEmail(userEmail) {
         port: 25,
         auth: {
             user: 'gamergarage2020@gmail.com',
-            pass: process.env.PASSWORD
+            pass: 'thegame2020*'
         },
         tls: {
             rejectUnauthorized: false
