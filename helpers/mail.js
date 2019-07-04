@@ -1,6 +1,3 @@
-let fs = require('fs')
-let password = fs.readFileSync('./config/password.csv', 'utf8')
-
 function sendEmail(userEmail) {
 
     var nodemailer = require('nodemailer');
@@ -11,7 +8,7 @@ function sendEmail(userEmail) {
         port: 25,
         auth: {
             user: 'theblessedadventure123@gmail.com',
-            pass: password
+            pass: process.env.PASSWORD
         },
         tls: {
             rejectUnauthorized: false

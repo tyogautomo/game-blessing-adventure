@@ -5,7 +5,7 @@ const {
     UserMonster,
     UserItem
 } = require('../models/index')
-
+const sendEmail = require('../helpers/mail')
 const Op = require('sequelize').Op
 const bcrypt = require('bcryptjs')
 
@@ -122,7 +122,6 @@ class ControllerUser {
     }
 
     static register(req, res) {
-        console.log(process.env.PASSWORD)
         let data = {
             username: req.body.username,
             email: req.body.email,
@@ -132,14 +131,13 @@ class ControllerUser {
             ap: 5,
             exp: 0
         }
-        // console.log(data)
 
         User.create(data)
             .then(() => {
+                sendEmail(req.session.currentUser.email)
                 res.redirect('/')
             })
             .catch(err => {
-                console.log(err)
                 res.send(err)
             })
     }
