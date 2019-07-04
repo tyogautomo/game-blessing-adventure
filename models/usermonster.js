@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
   UserMonster.init({
     UserId: DataTypes.INTEGER,
     MonsterId: DataTypes.INTEGER,
-    userHp: DataTypes.INTEGER,
-    monsterHp: DataTypes.INTEGER,
+    userHP: DataTypes.INTEGER,
+    monsterHP: DataTypes.INTEGER,
     result: DataTypes.STRING
   }, {
     sequelize
