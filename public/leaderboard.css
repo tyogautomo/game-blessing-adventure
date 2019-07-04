@@ -38,6 +38,10 @@ tr.data {
     font-size: 20px;
 }
 
+tr.data, .sortBy2 {
+    padding-top: 50px;
+}
+
 div.table-container {
     padding-left: 240px;
 }
