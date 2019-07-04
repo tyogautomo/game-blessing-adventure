@@ -27,6 +27,10 @@ div.leader-board-color {
     z-index: 2;
 }
 
+div.table-container {
+    z-index: 3;
+}
+
 div.monster-table {
     position: relative;
     padding-left: 208px;

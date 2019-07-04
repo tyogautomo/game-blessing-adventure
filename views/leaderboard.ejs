@@ -22,6 +22,8 @@
     <div class="container">
         <div class="leader-board-color">
         </div>
+        <div class="table-container">
+
             <h1>Leaderboard</h1>
             <br>
             <form action="/leaderboard" method="POST">
@@ -52,12 +54,12 @@
     
             <table>
                 <tr>
-                    <th>Rank=====</th>
-                    <th>Username========</th>
-                    <th>Balance========</th>
-                    <th>HP========</th>
-                    <th>AP========</th>
-                    <th>EXP========</th>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Balance</th>
+                    <th>HP</th>
+                    <th>AP</th>
+                    <th>EXP</th>
                 </tr>
     
                 <% let counter = 1%>
@@ -73,6 +75,7 @@
                 <% counter++ %>
                 <%}%>
             </table>
+        </div>
     </div>
 
 </body>
