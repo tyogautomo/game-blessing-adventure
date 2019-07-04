@@ -23,17 +23,17 @@ h2.sortBy2 {
     padding-left: 300px;
 }
 
-select.sort {
-    height: 100px;
-    width: 150px;
+.sort {
+    height: 200px;
+    width: 250px;
 }
 
-td.sortby {
+.sortby {
     font-size: 25px;
 }
 
 div.table-container {
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 div.monster-table {
