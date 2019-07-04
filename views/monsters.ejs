@@ -48,6 +48,7 @@
                     <th>HEALTH POINT</th>
                     <th>ATTACK POINT</th>
                     <th>LEVEL</th>
+                    <th>IMAGE</th>
                     <th>OPTIONS</th>
                 </tr>
     
@@ -58,7 +59,7 @@
                     <td><%= monster.dataValues.name %></td>
                     <td><%= monster.dataValues.hp %></td>
                     <td><%= monster.dataValues.ap %></td>
-                    <td><%= monster.dataValues.level %></td>
+                    <td><%= monster.dataValues.level %></td>                    
                     <td><button class="edit" onclick="window.location.href = '/admin/monsters/edit/<%= monster.dataValues.name %>'">Edit</button>
                         | <button class="delete" onclick="window.location.href = '/admin/monsters/delete/<%= monster.dataValues.id %>'" onclick="return confirm('Are you sure?')">Delete</button>
                 </tr>
