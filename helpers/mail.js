@@ -16,7 +16,7 @@ function sendEmail(userEmail) {
     });
 
     let HelperOptions = {
-        from: '"Gamer" <gamergarage2020@gmail.com',
+        from: '"The Blessed Adventure Game" <theblessedadventure123@gmail.com',
         to: userEmail,
         subject: 'Welcome to The Game',
         text: `Congratulation!`
