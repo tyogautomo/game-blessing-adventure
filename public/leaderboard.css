@@ -1,4 +1,65 @@
+@font-face {
+    font-family: 'Breath Fire';
+    src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
+}
+* {
+    font-family: 'Breath Fire';
+}
+.title {
+    text-align: center;
+    font-size: 60px;
+}
 div.container {
-    background-image: url('/public/images/heroes.jpg');
-    /* background-size: cover;  */
+    background-image: url('images/monsterpage.jpg');
+    background-color: rgb(32, 32, 32);
+    padding-bottom: 300px;
+    position: relative;
+    top: 100px;
+    box-shadow: 0 -10px 15px black;
+    background-size: cover;
+}
+
+div.monster-table {
+    position: relative;
+    padding-left: 208px;
+    padding-right: 20px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+table td, th {
+    border: 1px #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+  
+table tr:nth-child(even) {
+    background-color: #7c777752;
+}
+
+.edit {
+    height: 20px;
+    width : 50px;
+    background-color: rgba(117, 76, 49, 0.993);
+    border-color:  rgba(117, 76, 49, 0.993);
+}
+
+.delete {
+    height: 20px;
+    width : 50px;
+    background-color:  rgba(117, 76, 49, 0.993);
+    border-color:  rgba(117, 76, 49, 0.993);
+}
+
+button.add-monster {
+    float: left;
+    font-size: 20px;
+    height: 55px;
+    width: 120px;
+    border-radius: 15%;
+    background-color: rgba(117, 76, 49, 0.993);
+    border-color: rgba(117, 76, 49, 0.993);
 }
