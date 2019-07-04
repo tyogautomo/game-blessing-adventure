@@ -1,5 +1,4 @@
 div.container {
-    /* background-image: url('/public/images/heroes.jpg');
-    background-size: cover; */
-    background-color: blue;
+    background-image: url('/public/images/heroes.jpg');
+    /* background-size: cover;  */
 }
