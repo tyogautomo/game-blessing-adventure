@@ -7,7 +7,7 @@ function sendEmail(userEmail) {
         secure: false,
         port: 25,
         auth: {
-            user: 'theblessedadventure123@gmail.com',
+            user: 'gamergarage2020@gmail.com',
             pass: process.env.PASSWORD
         },
         tls: {
@@ -16,10 +16,10 @@ function sendEmail(userEmail) {
     });
 
     let HelperOptions = {
-        from: '"The Blessed Adventure Game" <theblessedadventure123@gmail.com',
+        from: '"The Blessed Adventure Game" <gamergarage2020@gmail.com>',
         to: userEmail,
         subject: 'Welcome to The Game',
-        text: `Congratulation!`
+        text: `Congratulation your account succesfully registered! Enjoy the game!`
     };
 
     transporter.sendMail(HelperOptions, (error, info) => {
