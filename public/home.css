@@ -3,6 +3,10 @@
     src: url('fonts/breath_fire/Breathe\ Fire.otf') format('opentype');
 }
 
+* {
+    font-family: 'Breath Fire';
+}
+
 div.judul {
     font-family: 'Oswald'
 }
