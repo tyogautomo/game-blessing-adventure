@@ -19,8 +19,8 @@ div.container {
     background-size: cover;
     z-index: 1
 }
-div.color-container {
-    background-color: rgba(0, 0, 0, 0.582); 
+div.leaderboard-color {
+    background-color: rgb(0, 0, 0); 
     position: absolute;
     width: 100%;
     height: 100%;
