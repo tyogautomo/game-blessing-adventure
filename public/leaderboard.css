@@ -20,7 +20,7 @@ div.container {
     z-index: 1
 }
 div.leader-board-color {
-    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.52); 
     position: absolute;
     width: 100%;
     height: 100%;
