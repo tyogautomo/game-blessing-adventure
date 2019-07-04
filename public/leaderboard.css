@@ -24,16 +24,16 @@ h2.sortBy2 {
 }
 
 select.sort {
-    height: 50px;
+    height: 100px;
     width: 150px;
 }
 
 td.sortby {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 div.table-container {
-    padding-left: 150px;
+    padding-left: 200px;
 }
 
 div.monster-table {
