@@ -23,9 +23,9 @@ div.container {
     padding-left: 300px;
 }
 
-#sort {
-    height: 200px;
-    width: 250px;
+#sort, #direction {
+    height: 50px;
+    width: 150px;
 }
 
 .sortby {
