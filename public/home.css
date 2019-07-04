@@ -13,14 +13,18 @@ div.content {
 }
 
 div.home-container {
-    background-image: url('./images/home-background.jpg'); 
-    background-color: rgb(32, 32, 32);
+    background-image: url('./images/home-background.jpg');
     padding-bottom: 300px;
     position: relative;
     top: 100px;
     box-shadow: 0 -10px 15px black;
 }
-
+div.color-container {
+    background-color: rgba(0, 0, 0, 0.308); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 a.home {
     font-family: 'Oswald';
     width: 300px;

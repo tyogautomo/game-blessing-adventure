@@ -38,13 +38,13 @@ app.use('/login', loginRouter)
 app.use('/leaderboard', userRouter)
 
 // LOGIN PRIVILEGE
-// app.use((req, res, next) => {
-//     if (req.session.currentUser) {
-//         next()
-//     } else {
-//         res.send(`Please Log in First`)
-//     }
-// })
+app.use((req, res, next) => {
+    if (req.session.currentUser) {
+        next()
+    } else {
+        res.send(`Please Log in First`)
+    }
+})
 
 app.use('/userpage', express.static('public'), userRouter)
 app.use('/logout', logoutRouter)
