@@ -1,3 +1,7 @@
 div.content {
     background-image: url('./images/paper.jpg');
 }
+
+#username, #password {
+    background-color: transparent;
+}
