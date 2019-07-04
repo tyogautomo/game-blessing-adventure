@@ -15,13 +15,13 @@ const ControllerUserItem = require('../controllers/controller-useritem')
 // router.post('/users/search', ControllerUser.search)
 
 // // ------------------------- MONSTERS
-// router.get('/monsters', ControllerMonster.getAll)
-// router.get('/monsters/edit/:name', ControllerMonster.getOne)
-// router.post('/monsters/edit/:name', ControllerMonster.updateMonster)
-// router.get('/monsters/delete/:name', ControllerMonster.delete)
+router.get('/monsters', ControllerMonster.getAll)
+router.get('/monsters/edit/:name', ControllerMonster.getOne)
+router.post('/monsters/edit/:id', ControllerMonster.updateMonster)
+router.get('/monsters/delete/:id', ControllerMonster.delete)
 // router.post('/monsters/search', ControllerMonster.search)
-// router.get('/monsters/add', ControllerMonster.addPage)
-// router.post('/monsters/add', ControllerMonster.add)
+router.get('/monsters/add', ControllerMonster.addPage)
+router.post('/monsters/add', ControllerMonster.add)
 
 // // ------------------------- ITEMS
 // router.get('/items', ControllerItem.getAll)
