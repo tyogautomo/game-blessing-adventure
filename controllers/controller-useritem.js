@@ -75,6 +75,7 @@ class ControllerUserItem {
                 res.redirect(`/userpage/${userExist.dataValues.username}`)
             })
             .catch(err => {
+                // console.log(err.message, '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
                 res.send(err)
             })
     }

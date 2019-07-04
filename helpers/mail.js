@@ -1,6 +1,5 @@
 let fs = require('fs')
-let password = fs.readFileSync('./config/email.csv', 'utf8')
-
+let password = fs.readFileSync('./config/password.csv', 'utf8')
 // console.log(password)
 
 function sendEmail(userEmail) {

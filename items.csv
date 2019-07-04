@@ -7,10 +7,10 @@ mango,45,sellable
 wolfang,30,sellable
 lantern,30,sellable
 glass,40,sellable
-dragon_scale,61,sellable
-dragon_eyes,58,sellable
-dragon_legs,80,sellable
-dragon_arms,69,sellable
+dragon_scale,61,crafting
+dragon_eyes,58,crafting
+dragon_legs,80,crafting
+dragon_arms,69,crafting
 ring,30,sellable
 crown,50,sellable
 silver,38,sellable

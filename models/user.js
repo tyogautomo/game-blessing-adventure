@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'UserId'
       })
     }
+
+    static sort() {
+      
+    }
   }
   User.init({
     username: DataTypes.STRING,
