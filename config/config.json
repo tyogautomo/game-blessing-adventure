@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": 1234,
+    "database": "the_blessed_adventure",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production" : {
+    "username" : "noerbqlgtyokji",
+    "password" : "20eb702fe4672fa4deb3a10a9731e75d30289ffc222d536a72aa58e538d024ad",
+    "database" : "d5tlmoc7vuqlqt",
+    "host" : "ec2-107-20-173-2.compute-1.amazonaws.com",
+    "dialect" : "postgres"
+  }
+}
