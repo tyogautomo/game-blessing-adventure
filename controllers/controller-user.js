@@ -253,26 +253,17 @@ class ControllerUser {
         let sort = req.body.sort
         let direction = req.body.direction
 
-        User.findAll({
-                where: {
-                    username: {
-                        [Op.notIn]: ['admin']
-                    }
-                },
-                order: [
-                    [`${sort}`, `${direction}`]
-                ]
+        User.sort(sort,direction)
+        .then(users => {
+            res.render('leaderboard.ejs', {
+                users,
+                sort,
+                direction
             })
-            .then(users => {
-                res.render('leaderboard.ejs', {
-                    users,
-                    sort,
-                    direction
-                })
-            })
-            .catch(err => {
-                res.send(err)
-            })
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
 }
 

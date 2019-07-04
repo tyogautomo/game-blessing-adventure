@@ -12,8 +12,17 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
 
-    static sort() {
-      
+    static sort(whatToSort, ascOrDesc) {
+      return User.findAll({
+        where: {
+            username: {
+                [Op.notIn]: ['admin']
+            }
+        },
+        order: [
+            [`${whatToSort}`, `${ascOrDesc}`]
+        ]
+      })
     }
   }
   User.init({
