@@ -20,6 +20,7 @@ div.container {
     z-index: 1
 }
 .sortBy2 {
+    font-size: 120px;
     padding-left: 300px;
 }
 
@@ -30,7 +31,11 @@ div.container {
 }
 
 .sortby {
-    font-size: 35px;
+    font-size: 20px;
+}
+
+tr.data {
+    font-size: 15px;
 }
 
 div.table-container {
