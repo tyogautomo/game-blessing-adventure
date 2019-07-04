@@ -134,7 +134,7 @@ class ControllerUser {
 
         User.create(data)
             .then(() => {
-                sendEmail(req.session.currentUser.email)
+                sendEmail(req.body.email)
                 res.redirect('/')
             })
             .catch(err => {
