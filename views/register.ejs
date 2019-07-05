@@ -24,6 +24,9 @@
     </div>
     <div class="container">
         <div class="content">
+            <% if(flash.error) { %>
+                <h4><%= flash.error %></h4>
+            <%}%>
             <form action="/register" method="POST">
                 <table>
                     <tr>
