@@ -138,11 +138,11 @@ class ControllerUser {
                 res.redirect('/')
             })
             .catch(err => {
-                if(err[0].type == 'unique violation'){
-                    req.flash('error','Sorry this email has been registered with another account, change email and try it again.')
-                }
-                res.redirect('/register')
-                // res.send(err)
+                // if(err[0].type == 'unique violation'){
+                //     req.flash('error','Sorry this email has been registered with another account, change email and try it again.')
+                // }
+                // res.redirect('/register')
+                res.send(err)
             })
     }
 
