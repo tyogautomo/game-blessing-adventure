@@ -27,6 +27,6 @@
     "express-session": "^1.16.2",
     "nodemailer": "^6.2.1",
     "pg": "^7.11.0",
-    "sequelize": "^5.9.2"
+    "sequelize": "^5.15.1"
   }
 }
